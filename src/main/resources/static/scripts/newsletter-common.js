@@ -6,7 +6,7 @@ function buildNewsletter() {
 
     const secondaryNewsList = [];
     const secondaryNewsElements = document.querySelectorAll("#secondaryNewsList input[type='text']");
-    const numberOfSecondaryNews = secondaryNewsElements.length / 2; // Dividir por 2 ya que hay dos campos por cada noticia secundaria
+    const numberOfSecondaryNews = secondaryNewsElements.length / 2;
 
     for (let i = 0; i < numberOfSecondaryNews; i++) {
         const inputTitle = secondaryNewsElements[i * 2].value;
@@ -57,10 +57,8 @@ function addSecondaryNews(secondaryNewsCounter) {
         <button class="btn btn-link float-end" onclick="removeSecondaryNews(${secondaryNewsCounter})">Quitar</button>
         <br></div>`;
 
-    // Incrementar el contador para el próximo subformulario
     secondaryNewsCounter++;
 
-    // Agregar el formulario generado al final de la lista
     secondaryNewsList.insertAdjacentHTML('beforeend', formHtml);
 }
 
@@ -83,10 +81,8 @@ function addIncomingEvent(incomingEventCounter) {
         <button class="btn btn-link float-end" onclick="removeIncomingEvent(${incomingEventCounter})">Quitar</button>
         </div><br>`;
 
-    // Incrementar el contador para el próximo subformulario
     incomingEventCounter++;
 
-    // Agregar el formulario generado al final de la lista
     incomingEventList.insertAdjacentHTML('beforeend', formHtml);
 }
 
@@ -105,10 +101,8 @@ function addSecondaryNews() {
         <button class="btn btn-link float-end" onclick="removeSecondaryNews(${secondaryNewsCounter})">Quitar</button>
         <br></div>`;
 
-    // Incrementar el contador para el próximo subformulario
     secondaryNewsCounter++;
 
-    // Agregar el formulario generado al final de la lista
     secondaryNewsList.insertAdjacentHTML('beforeend', formHtml);
 }
 
@@ -131,10 +125,8 @@ function addIncomingEvent() {
         <button class="btn btn-link float-end" onclick="removeIncomingEvent(${incomingEventCounter})">Quitar</button>
         <br></div>`;
 
-    // Incrementar el contador para el próximo subformulario
     incomingEventCounter++;
 
-    // Agregar el formulario generado al final de la lista
     incomingEventList.insertAdjacentHTML('beforeend', formHtml);
 }
 
