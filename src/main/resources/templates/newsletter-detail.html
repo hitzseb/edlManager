@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <div th:replace="base :: css"></div>
+  <title>Create Newsletter</title>
+</head>
+<body>
+
+<header th:replace="base :: header"></header>
+
+<!-- Page Content -->
+<div class="container my-5">
+
+  <div class="row">
+    <div class="col col-auto mx-auto">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/newsletter">Newsletters</a></li>
+          <li class="breadcrumb-item active" id="newsletter-title"></li>
+        </ol>
+      </nav>
+
+    </div>
+  </div>
+
+  <table border="0" style="width:656px;margin:0 auto" id="newsletter-container"> </table>
+</div>
+
+</div>
+<!-- /.container -->
+
+<footer th:replace="base :: footer"></footer>
+
+<div th:replace="base :: scripts"></div>
+
+<script th:src="@{/scripts/newsletter.js}"></script>
+
+<script th:src="@{/scripts/newsletter-detail.js}"></script>
+
+</body>
+</html>

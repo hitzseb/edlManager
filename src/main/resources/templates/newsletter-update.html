@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <div th:replace="base :: css"></div>
+    <title>Editar newsletter</title>
+</head>
+<body>
+
+<header th:replace="base :: header"></header>
+
+<!-- Page Content -->
+<div class="container my-5">
+
+    <div class="row">
+        <div class="col col-auto mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/newsletter">Newsletters</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Editar</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-md-6 mx-auto">
+
+            <div id="newsletterForm">
+                <label for="title">Título:</label>
+                <input class="form-control" type="text" id="title" name="title" required><br>
+
+                <label for="url">URL:</label>
+                <input class="form-control" type="text" id="url" name="url" required><br>
+
+                <label for="image">Imagen:</label>
+                <input class="form-control" type="text" id="image" name="image" required><br>
+
+                <label for="preview">Vista previa:</label>
+                <textarea class="form-control" id="preview" name="preview" required ></textarea><br>
+
+                <div id="secondaryNewsList"></div>
+                <button class="btn btn-link my-2" type="button" onclick="addSecondaryNews()">Agregar Noticia</button>
+
+                <div id="incomingEventList"></div>
+                <button class="btn btn-link my-2" type="button" onclick="addIncomingEvent()">Agregar Evento</button>
+
+                <br>
+                <button class="btn btn-primary mt-4" onclick="updateNewsletter()">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<footer th:replace="base :: footer"></footer>
+
+<script th:replace="base :: scripts"></script>
+
+<script th:src="@{/scripts/newsletter-common.js}"></script>
+
+<script th:src="@{/scripts/newsletter-update.js}"></script>
+
+</body>
+</html>
